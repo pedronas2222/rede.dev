@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Cadastro - Mercantil cidade</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <!-- Example Code -->
+    
+    <form class="row g-3" action="processar_cadastro.php" method="post" enctype="multipart/form-data">
+      <div class="col-md-6">
+        <label for="inputNome" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descrição*</font></font></label>
+        <input type="text" class="form-control" id="inputNome" name="descricao" required>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Preço Custo(R$)*</font></font></label>
+        <input type="number" class="form-control" id="inputZip"  name="valor_custo" required>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Preço Venda(R$)*</font></font></label>
+        <input type="number" class="form-control" id="inputZip" name="valor_venda" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Margem Lucro(%)*</font></font></label>
+        <input type="number" class="form-control" id="inputPassword4" name="margem" required>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SKU*</font></font></label>
+        <input type="text" class="form-control" id="inputZip" name="sku" required>
+      </div>
+      <div class="col-md-2">
+        <label for="inputAddress" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Informacao*</font></font></label>
+        <textarea type="text" class="form-control" id="inputAddress" name="informacao" required></textarea>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Promoção</font></font></label>
+        <input class="form-check-input" type="checkbox" name="promocao" value="1">
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Valor Promoção(R$)*</font></font></label>
+        <input type="number" class="form-control" id="inputZip" name="valor_promocao" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Selecione as imagens*</font></font></label>
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">1ª Imagem</label>
+          <input type="file" class="form-control" name="imagem1">
+        </div>
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">2ª Imagem</label>
+          <input type="file" class="form-control" name="imagem2">
+        </div>
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">3ª Imagem</label>
+          <input type="file" class="form-control" name="imagem3">
+        </div>
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">3ª Imagem</label>
+          <input type="file" class="form-control" name="imagem3">
+        </div>
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">4ª Imagem</label>
+          <input type="file" class="form-control" name="imagem4">
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cadastrar</font></font></button>
+      </div>
+    </form>
+    
+    <!-- End Example Code -->
+  </body>
+</html>

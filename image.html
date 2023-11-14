@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload e Codificação em Base64</title>
+</head>
+<body>
+    <h1>Faça o upload de uma imagem</h1>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload e Visualização de Imagem</title>
+</head>
+<body>
+    <input type="file" id="fileInput" accept="image/*">
+    <div id="imagePreview"></div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const imagePreview = document.getElementById('imagePreview');
+
+        fileInput.addEventListener('change', function() {
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    const image = new Image();
+                    image.src = e.target.result;
+                    imagePreview.innerHTML = ''; // Limpa a área de visualização
+                    imagePreview.appendChild(image);
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.innerHTML = 'Nenhuma imagem selecionada';
+            }
+        });
+    </script>
+</body>
+</html>

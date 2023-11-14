@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" lang="pt-BR">
+    <title>Cadastro de Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Produto</h1>
+    <form action="processar_cadastro.php" method="post" enctype="multipart/form-data">
+        <label for="descricao">Descrição do Produto:</label>
+        <input type="text" name="descricao" required>
+
+        <label for="valor_custo">Valor de Custo:</label>
+        <input type="text" name="valor_custo" required>
+
+        <label for="valor_venda">Valor de Venda:</label>
+        <input type="text" name="valor_venda" required>
+
+        <label for="margem">Margem de Lucro (%):</label>
+        <input type="text" name="margem" required>
+
+        <label for="sku">SKU:</label>
+        <input type="text" name="sku" required>
+
+        <label for="informacao">Informação:</label>
+        <textarea name="informacao"></textarea>
+
+        <label for="promocao">Em Promoção:</label>
+        <input type="checkbox" name="promocao" value="1">
+
+        <label for="valor_promocao">Valor em Promoção:</label>
+        <input type="text" name="valor_promocao">
+
+        <label for="data_cadastro">Data de Cadastro:</label>
+        <input type="date" name="data_cadastro" required>
+
+        <label for="data_alteracao">Data de Alteração:</label>
+        <input type="date" name="data_alteracao">
+
+        <label for="imagem1">Imagem 1:</label>
+        <input type="file" name="imagem1">
+
+        <label for="imagem2">Imagem 2:</label>
+        <input type="file" name="imagem2">
+
+        <label for="imagem3">Imagem 3:</label>
+        <input type="file" name="imagem3">
+
+        <label for="imagem4">Imagem 4:</label>
+        <input type="file" name="imagem4">
+
+        <input type="submit" value="Cadastrar Produto">
+    </form>
+</body>
+</html>
